@@ -38,9 +38,9 @@ namespace OrdersApiApp.Service.OrderService
             return await db.Orders.ToListAsync();
         }
 
-        public Task<Order> GetOrderById(int id)
+        public async Task<Order> GetOrderById(int id)
         {
-            throw new NotImplementedException();
+            return await db.Orders.FirstOrDefaultAsync((order) => order.Id == id);
         }
 
         public Task<Order> UpdateOrder(Order order)
