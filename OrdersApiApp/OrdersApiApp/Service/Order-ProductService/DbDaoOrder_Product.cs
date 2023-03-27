@@ -38,7 +38,7 @@ namespace OrdersApiApp.Service.Order_ProductService
             return order_product;
         }
 
-        public Task<Order_Product> UpdateOrder_Product(Client client)
+        public Task<Order_Product> UpdateOrder_Product(Order_Product order_product)
         {
             throw new NotImplementedException();
         }
