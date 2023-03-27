@@ -1,9 +1,9 @@
-using OrdersApiApp.Model;
 using OrdersApiApp.Model.Entity;
 using OrdersApiApp.Service.ClientService;
 using OrdersApiApp.Service.OrderService;
 using OrdersApiApp.Service.Order_ProductService;
 using OrdersApiApp.Service.ProductService;
+using OrdersApiApp.Model.Connection;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using System.Xml.Linq;
 
 namespace OrdersApiApp.Model.Entity
@@ -14,11 +15,12 @@ namespace OrdersApiApp.Model.Entity
         public Client client { get; set; }
 
         public Product product { get; set; }
-
+        
+        [NotMapped]
         public ICollection<Client> Clients { get; set; }
 
-
         [JsonIgnore]
+        [NotMapped]
         ICollection<Product> Products { get; set; }
 
         public Order()

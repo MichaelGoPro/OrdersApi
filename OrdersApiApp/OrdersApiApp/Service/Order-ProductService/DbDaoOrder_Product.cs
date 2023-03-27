@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OrdersApiApp.Model;
+using OrdersApiApp.Model.Connection;
 using OrdersApiApp.Model.Entity;
 
 namespace OrdersApiApp.Service.Order_ProductService
 {
-    public class DbDaoOrder_Product : DbContext, IDaoOrderProduct
+    public class DbDaoOrder_Product : IDaoOrderProduct
     {
         private ApplicationDBContext db;
 

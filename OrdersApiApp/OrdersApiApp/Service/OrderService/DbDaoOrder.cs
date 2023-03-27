@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OrdersApiApp.Model;
+using OrdersApiApp.Model.Connection;
 using OrdersApiApp.Model.Entity;
 
 namespace OrdersApiApp.Service.OrderService
