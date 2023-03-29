@@ -1,6 +1,4 @@
-﻿using System.Xml.Linq;
-
-namespace OrdersApiApp.Model.Entity
+﻿namespace OrdersApiApp.Model.Entity
 {
     public class Order_Product
     {

@@ -4,7 +4,7 @@ using OrdersApiApp.Model.Connection;
 
 namespace OrdersApiApp.Service.ClientService
 {
-    public class DbDaoClient : IDaoClient
+    public class DbDaoClient : DbContext, IDaoClient
     {
         public DbSet<Client>? Clients { set; get; }
 
@@ -12,13 +12,13 @@ namespace OrdersApiApp.Service.ClientService
 
         private ApplicationDBContext db;
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Order>()
                 .HasOne(c => c.client)
                 .WithMany(o => o.Orders)
                 .OnDelete(DeleteBehavior.Restrict);
-        }*/
+        }
 
         public async Task<Client> AddClient(Client client)
         {
@@ -51,7 +51,10 @@ namespace OrdersApiApp.Service.ClientService
 
         public async Task<Client> UpdateClient(Client client)
         {
-            throw new NotImplementedException();
+            Client? newClient = null;
+
+
+            return newClient;
         }
     }
 }
