@@ -51,10 +51,7 @@ namespace OrdersApiApp.Service.ClientService
 
         public async Task<Client> UpdateClient(Client client)
         {
-            Client? newClient = null;
-
-
-            return newClient;
+             return client;
         }
     }
 }

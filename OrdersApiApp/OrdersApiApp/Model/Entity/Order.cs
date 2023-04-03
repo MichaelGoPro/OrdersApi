@@ -10,34 +10,25 @@ namespace OrdersApiApp.Model.Entity
 
         public int ClientId { get; set; }
 
-        public int ProductId { get; set; }
-
         public Client client { get; set; }
-
-        public Product product { get; set; }
-        
+                
         [NotMapped]
         public ICollection<Client> Clients { get; set; }
 
-        [JsonIgnore]
-        [NotMapped]
-        ICollection<Product> Products { get; set; }
-
-        public Order()
+                public Order()
         {
 
         }
 
-        public Order(int id, int clientId, int productId)
+        public Order(int id, int clientId)
         {
             Id = id;
             ClientId = clientId;
-            ProductId = productId;
         }
 
         public override string ToString()
         {
-            return $"{Id} - {ClientId} - {ProductId}";
+            return $"{Id} - {ClientId}";
         }
     }
 }

@@ -43,9 +43,9 @@ namespace OrdersApiApp.Service.OrderService
             return await db.Orders.FirstOrDefaultAsync((order) => order.Id == id);
         }
 
-        public Task<Order> UpdateOrder(Order order)
+        public async Task<Order> UpdateOrder(Order order)
         {
-            throw new NotImplementedException();
+            return order;
         }
     }
 }

@@ -4,14 +4,17 @@ namespace OrdersApiApp.Model.SubEntity
 {
     public class Bill
     {
-        public List<Product>? Products { get; set; }
+        public double Sum { set; get; }
 
-        public int OrderId { get; set; }
+        public List<double>? Prices { set; get; }
+        
+        public List<String>? Products { get; set; }
 
-        public List<int>? Quantity { get; set; }
-
-        public double SumPrice { get; set; }
-
-        public Bill() { }
+        public Bill(double sum, List<double>? prices, List<string>? products)
+        {
+            Sum = sum;
+            Prices = prices;
+            Products = products;
+        }
     }
 }

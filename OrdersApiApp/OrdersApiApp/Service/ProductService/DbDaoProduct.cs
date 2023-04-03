@@ -43,7 +43,7 @@ namespace OrdersApiApp.Service.ProductService
 
         public async Task<Product> UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            return product;
         }
     }
 }
