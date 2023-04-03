@@ -1,6 +1,6 @@
-﻿using OrdersApiApp.Model;
-using OrdersApiApp.Model.Entity;
+﻿using OrdersApiApp.Model.Entity;
 using Microsoft.EntityFrameworkCore;
+using OrdersApiApp.Model.Connection;
 
 namespace OrdersApiApp.Service.ClientService
 {
@@ -51,7 +51,7 @@ namespace OrdersApiApp.Service.ClientService
 
         public async Task<Client> UpdateClient(Client client)
         {
-            throw new NotImplementedException();
+             return client;
         }
     }
 }

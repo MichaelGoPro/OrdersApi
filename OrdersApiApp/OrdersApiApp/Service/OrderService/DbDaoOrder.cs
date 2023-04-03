@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OrdersApiApp.Model;
+using OrdersApiApp.Model.Connection;
 using OrdersApiApp.Model.Entity;
 
 namespace OrdersApiApp.Service.OrderService
@@ -38,14 +38,14 @@ namespace OrdersApiApp.Service.OrderService
             return await db.Orders.ToListAsync();
         }
 
-        public Task<Order> GetOrderById(int id)
+        public async Task<Order> GetOrderById(int id)
         {
-            throw new NotImplementedException();
+            return await db.Orders.FirstOrDefaultAsync((order) => order.Id == id);
         }
 
-        public Task<Order> UpdateOrder(Order order)
+        public async Task<Order> UpdateOrder(Order order)
         {
-            throw new NotImplementedException();
+            return order;
         }
     }
 }
